@@ -1,6 +1,5 @@
 {
   "project": {
-    "version": "1.0.0-beta.28.3",
     "name": "oshop"
   },
   "apps": [
@@ -50,18 +49,16 @@
   },
   "defaults": {
     "styleExt": "css",
-    "prefixInterfaces": false,
-    "inline": {
-      "style": false,
-      "template": false
+    "class": {
+      "spec": false
     },
-    "spec": {
-      "class": false,
-      "component": true,
-      "directive": true,
-      "module": false,
-      "pipe": true,
-      "service": true
+    "component": {
+      "spec": true,
+      "inlineStyle": false,
+      "inlineTemplate": false
     }
+  },
+  "warnings": {
+    "typescriptMismatch": false
   }
 }
