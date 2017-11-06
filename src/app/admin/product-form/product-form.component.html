@@ -44,12 +44,6 @@
   </div>
 
   <div class="col-md-6">
-    <div *ngIf="f.dirty" class="card float-right" style="width: 20rem;">
-      <img *ngIf="product.imageUrl" class="card-img-top" [src]="imageUrl.value">
-      <div class="card-block">
-        <h4 class="card-title">{{ title.value }}</h4>
-        <p class="card-text">{{ price.value | currency:'USD':true }}</p>
-      </div>
-    </div>
+    <product-card [product]="product" [show-actions]="false"></product-card>
   </div>
 </div>
