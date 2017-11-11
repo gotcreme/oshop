@@ -19,7 +19,7 @@ export class AdminProductsComponent implements OnDestroy {
   constructor(private productService: ProductService) { 
     this.subscription = this.productService.getAll()
       .subscribe(products => {
-        this.products = products.map(p => new Product(p));
+        this.products = products.map(p => new Product(p.payload));
         this.initializeTable(this.products);
       });
   };

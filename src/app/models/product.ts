@@ -1,4 +1,3 @@
-import { AngularFireAction } from "angularfire2/database";
 import * as firebase from 'firebase';
 
 export class Product {
@@ -8,11 +7,11 @@ export class Product {
     imageUrl: string;
     key: string;
 
-    constructor(firebaseObj: AngularFireAction<firebase.database.DataSnapshot>) {
-        this.title = firebaseObj.payload.val().title;
-        this.price = firebaseObj.payload.val().price;
-        this.category = firebaseObj.payload.val().category;
-        this.imageUrl = firebaseObj.payload.val().imageUrl;
-        this.key = firebaseObj.payload.key;
+    constructor(dataSnapshot: firebase.database.DataSnapshot) {
+        this.title = dataSnapshot.val().title;
+        this.price = dataSnapshot.val().price;
+        this.category = dataSnapshot.val().category;
+        this.imageUrl = dataSnapshot.val().imageUrl;
+        this.key = dataSnapshot.key;
     }
 }
