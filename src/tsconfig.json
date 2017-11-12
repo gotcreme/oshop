@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "baseUrl": "",
     "declaration": false,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
@@ -13,6 +12,15 @@
     "target": "es5",
     "typeRoots": [
       "../node_modules/@types"
-    ]
+    ],
+    "baseUrl": "./",
+    "paths": {
+      "shared/*": [
+        "./app/shared/*"
+      ],
+      "admin/*": [
+        "./app/admin/*"
+      ]
+    }
   }
 }
